@@ -1,0 +1,72 @@
+# Enter your details 
+def regis():
+    print("~~"*30)
+    login()
+    password()
+    inputname()
+    inputage()
+    inputMobile()
+    inputAddress()
+    inputEmail()
+    inputGender()
+    inputAadhar()
+    exitProgram()
+def login():
+    login = input("\tEnter Username :\n\t-")
+    print("~~~~~User ID accepted~~~~~~")
+def password():
+    passwrd = input("\tEnter Password : \n\t-")
+    if len(passwrd)>7 and passwrd.isalnum():
+        print("~~~~~Password accepted~~~~~")
+    else:
+        print("Password not accepted ! Please Try Again")
+        password()
+def inputname():
+    name = input("\tEnter your Name :\n\t-")
+    if len(name)>1 and name.isalpha():
+        print("~~~~~Name accepted~~~~~")
+    else:
+        print("Name not accepted ! Please Try Again")
+        inputname()
+def inputage():
+    age = int(input("\tEnter your Age :\n\t-"))
+    if age > 0 and age < 150:
+        print("~~~~~Age Accepted~~~~~")
+    else:
+        print("Age not accepted ! Try Again")
+        inputage()
+    
+def inputMobile():
+    mobile = input("\tEnter Your Mobile no.:\n\t-")
+    if len(mobile)==10 and mobile.isalnum():
+        print("~~~~~Mobile no. Accepted~~~~~")
+    else:
+        print("Wrong Mobile number")
+        inputMobile()
+def inputAddress():
+    address = input("\tEnter Your Address :\n\t-")
+    print("~~~~~Address Accepted~~~~~")
+def inputEmail():
+    email = input("\tEnter E-mail ID :\n\t-")
+    if email.find("@") > -1 and email.find(".") > -1:
+        print("~~~~~Email-ID Accepted~~~~~")
+    else:
+        print("Email-ID not Accepted ! Please Try Again")
+        inputEmail()
+def inputGender():
+    gender = input("\tEnter Your Gender :\n\t-")
+    if gender.find("Male") >-1 or gender.find("Female") > -1:
+        print("~~~~~Gender Accepted~~~~~")
+    else:
+        print("Gender not accepted")
+        inputGender()
+def inputAadhar():
+    aadhar = input("\tEnter your Aadhar no.:\n\t-")
+    if len(aadhar)==13 and aadhar.isalnum():
+        print("~~~~~Accepted no. Accepted~~~~~")
+    else:
+        print("Wrong Aadhar number")
+        inputAadhar()
+def exitProgram():
+    print("Thank You , Visit Again")
+regis()
